@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://BugAssets/crate.png" type="Texture" id=1]
+[ext_resource path="res://UI/HUD.gd" type="Script" id=2]
+[ext_resource path="res://BugAssets/Fonts/HUDFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://BugAssets/ramp.png" type="Texture" id=4]
+
+[node name="HUD" type="CanvasLayer"]
+follow_viewport_enable = true
+script = ExtResource( 2 )
+
+[node name="Box" type="TextureButton" parent="."]
+margin_left = 390.0
+margin_top = 527.001
+margin_right = 690.0
+margin_bottom = 827.001
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoxText" type="RichTextLabel" parent="."]
+margin_left = 436.967
+margin_top = 567.275
+margin_right = 461.967
+margin_bottom = 600.275
+custom_fonts/normal_font = ExtResource( 3 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ramp" type="TextureButton" parent="."]
+margin_left = 490.0
+margin_top = 523.357
+margin_right = 711.0
+margin_bottom = 740.357
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RampText" type="RichTextLabel" parent="."]
+margin_left = 538.022
+margin_top = 569.125
+margin_right = 553.022
+margin_bottom = 585.125
+custom_fonts/normal_font = ExtResource( 3 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlankButton" type="TextureButton" parent="."]
+margin_left = 595.942
+margin_top = 555.852
+margin_right = 895.942
+margin_bottom = 855.852
+rect_scale = Vector2( 0.4, 0.04 )
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlankText" type="RichTextLabel" parent="."]
+margin_left = 706.932
+margin_top = 558.434
+margin_right = 721.932
+margin_bottom = 574.434
+custom_fonts/normal_font = ExtResource( 3 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="Box" to="." method="_on_Box_button_down"]
+[connection signal="button_down" from="Ramp" to="." method="_on_Ramp_button_down"]
+[connection signal="button_down" from="PlankButton" to="." method="_on_PlankButton_button_down"]
